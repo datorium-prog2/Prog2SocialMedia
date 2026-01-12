@@ -11,5 +11,11 @@ namespace Prog2SocialMedia.Controllers
         {
             return Ok("Hello from the API!");
         }
+
+        [HttpPost("hello")]
+        public IActionResult HelloPost()
+        {
+            return Ok("Hello from the POST endpoint!");
+        }
     }
 }
