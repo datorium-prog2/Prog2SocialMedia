@@ -13,9 +13,11 @@ namespace Prog2SocialMedia.Controllers
         }
 
         [HttpPost("hello")]
-        public IActionResult HelloPost()
+        public IActionResult HelloPost(Name name)
         {
-            return Ok("Hello from the POST endpoint!");
+            return Ok($"Hello from the POST endpoint, {name}");
         }
     }
+
+    public record Name(string name);
 }
