@@ -1,0 +1,6 @@
+@Prog2SocialMedia_HostAddress = http://localhost:5149
+
+GET {{Prog2SocialMedia_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
