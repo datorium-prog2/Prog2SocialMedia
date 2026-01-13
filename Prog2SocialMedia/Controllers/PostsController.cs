@@ -23,6 +23,18 @@ namespace Prog2SocialMedia.Controllers
             return Ok(allPosts);
         }
 
+        [HttpGet("{id:int}")]
+        public IActionResult GetPostById(int id)
+        {
+            var post = _db.Posts.Find(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(post);
+        }
+
         [HttpPost]
         public IActionResult CreatePost(Post post)
         {
