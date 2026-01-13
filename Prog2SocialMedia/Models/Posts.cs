@@ -1,6 +1,6 @@
 ﻿namespace Prog2SocialMedia.Models
 {
-    public class Posts
+    public class Post
     {
         public int Id { get; set; }
         public string Title { get; set; }
