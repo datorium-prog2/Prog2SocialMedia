@@ -36,11 +36,9 @@ namespace Prog2SocialMedia.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreatePost(Post post)
+        public IActionResult CreatePost(PostDto postDto)
         {
-            post.Id = 0;
-            post.CreateAt = DateTime.UtcNow;
-
+            var post = Post.From(postDto);
             _db.Posts.Add(post);
             _db.SaveChanges();
             return Ok(post);
