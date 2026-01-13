@@ -22,5 +22,16 @@ namespace Prog2SocialMedia.Controllers
             List<Post> allPosts = _db.Posts.ToList();
             return Ok(allPosts);
         }
+
+        [HttpPost]
+        public IActionResult CreatePost(Post post)
+        {
+            post.Id = 0;
+            post.CreateAt = DateTime.UtcNow;
+
+            _db.Posts.Add(post);
+            _db.SaveChanges();
+            return Ok(post);
+        }
     }
 }
