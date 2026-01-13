@@ -3,6 +3,7 @@ using Prog2SocialMedia.Models;
 
 namespace Prog2SocialMedia.Data
 {
+    // AppDbContext aprakta mūsu datubāzi
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options): base(options)
